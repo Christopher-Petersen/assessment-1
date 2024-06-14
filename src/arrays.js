@@ -62,10 +62,16 @@ function extend(originalArray, additionalItems) {
 //   itemsWithLength(['a', 'bbb', 'cccc', 'dddddd', 'eee'], 3);
 //   => ['bbb', 'eee']
 function itemsWithLength(items, length) {
-
-//I have no earthly idea!
-
-}
+  let arr = []
+  
+    for(i = 0; i < items.length; i++) {
+      if(items[i].length === length) {
+      arr.push(items[i])    
+      }
+  
+    }
+   return arr; 
+  }
 
 // Return an array with every other element from the input array (start with index 0).
 // Ex.:
@@ -93,7 +99,7 @@ function findWordsStartingWith(words, letter) {
   for(let i = 0; i < words.length; i++) {
     if(words[i][0] === letter) {
       console.log("true")
-      indexes.push(i); 
+      indexes.push(i)
     }
   }
 
@@ -121,23 +127,30 @@ function smallestNItems(items, n) {
 //   => 2
 function findIndex(items, value) {
 
-  let valueFound = items.indexOf(value)
 
-  return valueFound; 
+  for(i = 0; i < items.length; i++) {
+    
+    if(items[i] === value) {
+      return i; 
+    }
+      }
+  }
 
-
-}
 
 // Given a start number and stop number, return a new array containing all the numbers
 // between the start and stop number.
 // Ex.:
 //   range(1, 5);
 //   => [1, 2, 3, 4, 5]
-function range(start, stop) {
-
-  //Coming back to it
-
-}
+function range(start, stop) { 
+  let  newArray = []
+  
+    for(i = start; i <= stop; i++) {
+        newArray.push(i)
+    }
+    return newArray;
+  
+  }
 
 export {
   bWords,
