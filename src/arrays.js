@@ -17,7 +17,12 @@ return numbers;
 // Ex.:
 //   bWords(['banana', 'orange', 'apple', 'Bonobo', 'kiwi', 'pear']);
 //   => ['banana', 'Bonobo]
-function bWords(words) {
+function bWords(words) { 
+
+  let valueFound = words.startsWith (`B`|| `b`) 
+
+return valueFound; 
+
 
 
 }
@@ -31,6 +36,11 @@ function bWords(words) {
 //  => [1, 2, 3, 4, 5, 6]
 function extend(originalArray, additionalItems) {
 
+  for(let i = 0; i = additionalItems.length; i++) {
+
+  additionalItems.push(originalArray[i])
+  }
+  return originalArray;
 
 }
 
@@ -49,6 +59,10 @@ function itemsWithLength(items, length) {
 //   => ['a', 'c', 'e']
 function everyOtherItem(items) {
 
+  for (let i = 0; i = items.length; i=+2) {
+    items.push(i)
+  }
+  return items;
 
 
 }
@@ -60,6 +74,15 @@ function everyOtherItem(items) {
 //   findWordsStartingWith(['apple', 'banana', 'kiwi', 'pear', 'bacon'], 'b');
 //   => [1, 4]
 function findWordsStartingWith(words, letter) {
+
+  let letter = `b`
+  for(let i = 0; i = words.length; i++) {
+
+  }
+
+  let valueFound = words.startsWith(`b`);
+
+  return valueFound
 
 
 }
@@ -93,7 +116,7 @@ function findIndex(items, value) {
 //   => [1, 2, 3, 4, 5]
 function range(start, stop) {
 
-  
+
 }
 
 export {
