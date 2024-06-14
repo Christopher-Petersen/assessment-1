@@ -3,29 +3,42 @@
 //   greaterThanTen([1, 2, 3, 11, 12, 13]);
 //   => [11, 12, 13]
 function greaterThanTen(numbers) {
-
-for( let i = 0; i > 10; i++) {
+  const newArray = []
+    
+  for( let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i])
+  if(numbers[i] > 10) {
+    console.log(`true`)
+    newArray.push(numbers[i])
+  } else {
+    console.log(`false`)
+  }
+  
+  }
 
 }
-
-return numbers;
-
-
-}
+  
+  return newArray;
 
 // Given an array of strings, return all words that start with 'b' or 'B'.
 // Ex.:
 //   bWords(['banana', 'orange', 'apple', 'Bonobo', 'kiwi', 'pear']);
 //   => ['banana', 'Bonobo]
+
 function bWords(words) { 
+  let bSolution = []
 
-  let valueFound = words.startsWith (`B`|| `b`) 
+  for(let i = 0; i < words.length; i++) {
 
-return valueFound; 
+    if(words[i][0] === 'b' || words[i][0] === "B") {
+      console.log("true")
+      bSolution.push(words[i]);
+      } 
+    }
 
+    return bSolution; 
+  }
 
-
-}
 
 
 
@@ -50,6 +63,7 @@ function extend(originalArray, additionalItems) {
 //   => ['bbb', 'eee']
 function itemsWithLength(items, length) {
 
+//I have no earthly idea!
 
 }
 
@@ -95,7 +109,7 @@ function findWordsStartingWith(words, letter) {
 //   => [21, 4, 1]
 function smallestNItems(items, n) {
 
-
+  //I have no idea
 }
 
 // Search for a value in the array and return its index. If the value appears
@@ -105,6 +119,10 @@ function smallestNItems(items, n) {
 //   findIndex(['a', 'b', 'c', 'a', 'b', 'c'], 'c');
 //   => 2
 function findIndex(items, value) {
+
+  let valueFound = items.indexOf(value)
+
+  return valueFound; 
 
 
 }
@@ -116,6 +134,7 @@ function findIndex(items, value) {
 //   => [1, 2, 3, 4, 5]
 function range(start, stop) {
 
+  //Coming back to it
 
 }
 
