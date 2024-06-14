@@ -49,9 +49,9 @@ function bWords(words) {
 //  => [1, 2, 3, 4, 5, 6]
 function extend(originalArray, additionalItems) {
 
-  for(let i = 0; i = additionalItems.length; i++) {
+  for(let i = 0; i < additionalItems.length; i++) {
 
-  additionalItems.push(originalArray[i])
+  originalArray.push(additionalItems[i]);
   }
   return originalArray;
 
@@ -88,18 +88,19 @@ function everyOtherItem(items) {
 //   findWordsStartingWith(['apple', 'banana', 'kiwi', 'pear', 'bacon'], 'b');
 //   => [1, 4]
 function findWordsStartingWith(words, letter) {
+  let indexes = []
 
-  let letter = `b`
-  for(let i = 0; i = words.length; i++) {
-
+  for(let i = 0; i < words.length; i++) {
+    if(words[i][0] === letter) {
+      console.log("true")
+      indexes.push(i); 
+    }
   }
 
-  let valueFound = words.startsWith(`b`);
-
-  return valueFound
-
+  return indexes;
 
 }
+
 
 // Return the `n` smallest values in the array in descending order (largest
 // numbers first). Assume that `n` will always be less than the length of the
