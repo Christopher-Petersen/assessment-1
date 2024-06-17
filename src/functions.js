@@ -31,11 +31,7 @@ function average(x, y) {
 //   => true
 function approximatelyEqual(x, y) {
 
-  if( let (x - y) > 0.001 === true ) {
-    alert (`True`);
-  } else {
-    alert("False")
-  }
+  return Math.abs(x - y) < 0.001 
 
 }
 
@@ -43,14 +39,21 @@ function approximatelyEqual(x, y) {
 // Ex.:
 //   fullName('John', 'Doe');
 //   => 'John Doe'
-function fullName(firstName, lastName) {}
+function fullName(firstName, lastName) {
+
+  return `${firstName} ${lastName}`
+  
+  }
 
 // Generate the sentence "PERSON was drinking BEVERAGE at LOCATION" using the
 // person, beverage and location provided.
 // Ex.:
 //   generateSentence('Kay', 'coffee', 'the local cafe');
 //   => 'Kay was drinking coffee at the local cafe.'
-function generateSentence(person, beverage, location) {}
+function generateSentence(person, beverage, location) {
+
+  return `${person} was drinking ${beverage} at ${location}.`
+}
 
 // Return the given string with all vowels replced with '*' characters.
 // Ex.:
